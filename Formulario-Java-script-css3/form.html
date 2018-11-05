@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Formulário</title>
+		<script>
+			function salvar() {
+				var senha = document.getElementById("senha").value;
+				if(senha == ""){
+					alert("Senha é obrigatória");
+				} else {
+					alert("Cadastro Realizado com sucesso.");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			<br><h2 style='text-align: center; color: #0095C6'>Receba sugestões de Viagem</h2>
+			<table border='1'  align='center' width='700px'> 
+				<tr height='50px' align='center'>
+					<td colspan='4'><img src='viagem.png' width='700px'></td>
+				</tr>
+				<tr>
+					<td align='left' width='25%' height='35px'><b>Nome:</b></td>
+					<td align='left'width='75%' colspan='3'><input type="text" size="71"></td>
+				</tr>
+				<tr>
+					<td align='left' width='25%' height='35px'><b>Continente preferido:</b></td>
+					<td align='left'width='75%' colspan='3'>
+						<select name="continente">
+							<option value="0"> -- Selecione -- 
+							<option value="1">África
+							<option value="2">América
+							<option value="3">Ásia
+							<option value="4">Europa
+							<option value="5">Oceania
+						</select>
+					</td>				
+				</tr>
+				<tr>
+					<td align='left' width='25%' height='35px'><b>Quanto pode pagar:</b></td>
+					<td align='left' width='25%'><input type="radio" name="valor" checked>até 1000 reais</td>
+					<td align='left' width='25%'><input type="radio" name="valor">de 1000 a 10000 reias</td>
+					<td align='left' width='25%'><input type="radio" name="valor">mais de 10000 reias</td>
+				</tr>
+				<tr>
+					<td align='left' width='25%' height='35px'><b>Tipo de Viagem:</b></td>
+					<td align='left' width='25%'><input type="checkbox">aventura</td>
+					<td align='left' width='25%'><input type="checkbox">romantica</td>
+					<td align='left' width='25%'><input type="checkbox">gastronômica</td>
+				</tr>
+				<tr>
+					<td align='left' width='25%' height='35px'><b>Cite 3 Viagens que fez:</b></td>
+					<td align='left' width='25%'><input type="text"></td>
+					<td align='left' width='25%'><input type="text"></td>
+					<td align='left' width='25%'><input type="text"></td>
+				</tr>
+				<tr>
+					<td align='left' width='25%' height='35px'><b>Digite senha do site:</b></td>
+					<td align='left'width='75%' colspan='3'><input type="password" size="30" id='senha'></td>
+				</tr>
+				<tr>
+					<td align='center' width='55%' height='35px'  colspan='2'>
+						<input type="reset" value="Reset" style='font-size: 18px;'>
+					</td>
+					<td align='center' width='55%' height='35px'  colspan='2' rowspan='2'>
+						<input type="button" value="Salvar" style='font-size: 18px;' onclick="salvar();">
+					</td>
+				</tr>
+				<tr>
+					<td align='center' width='55%' height='35px'  colspan='2'>
+						<a href="menu.html"><p style='font-size: 20px;'>Ir para Menu</p></a>
+					</td>
+				</tr>			
+			</table>
+		</form>
+	</body>
+</html> 

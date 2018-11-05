@@ -1,0 +1,49 @@
+﻿<html>
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			function criaLink() {
+				var url = document.getElementById("url").value;
+				var nome = document.getElementById("nome").value;				
+				if(nome == ""){
+					document.getElementById("saida").innerHTML = "Informe o nome do site. Exemplo: Google";
+				} else if( url == "" ){
+					document.getElementById("saida").innerHTML = "Informe uma url. Exemplo: https://www.google.com.br";
+				} else {
+					var link = "<a href='"+url+"' target='_blank'>Vá para " + nome + "</a>";
+					document.getElementById("saida").innerHTML = link;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table border='1'  align='center' width='600px'> 
+			<tr>
+				<td colspan='2' align='center' valign='middle'><h1 style='color:blue'>Criador de Links</h1></td>
+			</tr>
+			<tr height='50px'align='center'>
+				<td width='50%'><b>Informe o nome do site que deseja ir:</b></td>
+				<td width='50%'><input id="nome" type="text" size='36' value='FPU'></td>
+			</tr>
+			<tr height='50px'align='center'>
+				<td><b>Informe a URL que deseja criar o link: </b></td>
+				<td><input id="url" type="text" size='36' value='http://www.fpu.com.br'></td>
+			</tr>
+			<tr height='50px'>
+				<td colspan='2'align='center'>
+					<button type="button" onclick="criaLink();" style='font-size: 18px;'> Criar Link</button>
+				</td>
+			</tr>
+			<tr height='50px'>
+				<td colspan='2' align='center'>
+					<p id="saida" style='font-size: 20px;'></p>
+				</td>
+			</tr>
+			<tr height='50px'>
+				<td colspan='2' align='center'>
+					<a href = "menu.html"><p style='font-size: 20px;'>Voltar para Menu</p></a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html> 
